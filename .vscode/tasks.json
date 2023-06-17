@@ -1,0 +1,68 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "grunt",
+			"script": "default",
+			"target": "default",
+			"path": "project/grunt/",
+			"fileName": "gruntfile.js",
+			"uri": {
+				"$mid": 1,
+				"fsPath": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"external": "file:///var/www/grunt-show/project/grunt/gruntfile.js",
+				"path": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"scheme": "file"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"label": "grunt: default"
+		},
+		{
+			"type": "grunt",
+			"script": "css",
+			"target": "css",
+			"path": "project/grunt/",
+			"fileName": "gruntfile.js",
+			"uri": {
+				"$mid": 1,
+				"fsPath": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"external": "file:///var/www/grunt-show/project/grunt/gruntfile.js",
+				"path": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"scheme": "file"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"label": "grunt: css"
+		},
+		{
+			"type": "grunt",
+			"script": "js",
+			"target": "js",
+			"path": "project/grunt/",
+			"fileName": "gruntfile.js",
+			"uri": {
+				"$mid": 1,
+				"fsPath": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"external": "file:///var/www/grunt-show/project/grunt/gruntfile.js",
+				"path": "/var/www/grunt-show/project/grunt/gruntfile.js",
+				"scheme": "file"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"label": "grunt: js"
+		},
+		{
+			"label": "Apache2 Error log",
+			"type": "shell",
+			"command": "tail -f /var/log/apache2/error.log"
+
+		}
+	]
+}

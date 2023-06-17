@@ -28,6 +28,10 @@ module.exports = function(grunt){
             src: ['../js/**/*.js'],
             dest: 'dist/app.js',
           },
+          scss: {
+            src: ['../scss/**/*.scss'],
+            dest: 'dist/style.scss',
+          }
         },
         cssmin: {
           options: {
@@ -37,6 +41,17 @@ module.exports = function(grunt){
           target: {
             files: {
               '../../htdocs/css/style.min.css': [ 'dist/style.css']
+            }
+          }
+        },
+        sass: {                              // Task
+          dist: {                            // Target
+            options: {                       // Target options
+              style: 'expanded'
+            },
+            files: {                         // Dictionary of files
+              'main.css': 'main.scss',       // 'destination': 'source'
+              'widgets.css': 'widgets.scss'
             }
           }
         },
@@ -87,8 +102,11 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-uglify');
       grunt.loadNpmTasks('grunt-contrib-copy');
       grunt.loadNpmTasks('grunt-contrib-obfuscator');
+      grunt.loadNpmTasks('grunt-contrib-sass');
 
-      grunt.registerTask('default',['helloworld','copy','concat','cssmin','uglify','obfuscator','watch'])
+      grunt.registerTask('default',['helloworld','copy','concat','cssmin','uglify','obfuscator','watch']);
+      grunt.registerTask('css',['concat:css','cssmin']);
+      grunt.registerTask('js',['concat:js','uglify','obfuscator'])
     
     grunt.registerTask("helloworld",function(){
         console.log("I am grunt running...");
